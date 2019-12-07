@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('./public'));
 
@@ -20,6 +21,6 @@ app.get('/gingerkisses', function(request, response){
   });
 });
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log('great job nicholas, you started a server on port 3000');
 });
